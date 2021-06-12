@@ -1,0 +1,313 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+main {
+  height: 100vh;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.1fr 1fr;
+      grid-template-columns: 1.1fr 1fr;
+  height: 100vh;
+}
+
+.text-area {
+  padding: 4.5rem 18rem 3rem 15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: url(/images/bg-pattern-desktop.svg), linear-gradient(135deg, white, #fff5f5);
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  background-position: center, center;
+}
+
+.text-area .destop-logo {
+  width: 34%;
+  margin-bottom: 8.3rem;
+}
+
+.text-area .description h1 {
+  font-size: 6rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5rem;
+  font-weight: 400;
+  color: #413a3a;
+}
+
+.text-area .description h1 span {
+  color: #ce9797;
+  font-weight: 300;
+}
+
+.text-area .description p {
+  font-size: 1.4rem;
+  color: #ce9797;
+  margin-top: 1.7rem;
+  width: 100%;
+  min-width: 400px;
+  max-width: 500px;
+  line-height: 2.3rem;
+  font-weight: 400;
+}
+
+.text-area form {
+  margin-top: 4rem;
+  position: relative;
+  width: 100%;
+  min-width: 380px;
+  max-width: 500px;
+}
+
+.text-area form input {
+  height: 5rem;
+  width: 100%;
+  border-radius: 3rem;
+  padding: 1.1rem 2.6rem;
+  height: 5rem;
+  border: 0.1rem solid #ce9797;
+  background: transparent;
+  color: #ce9797;
+  padding-left: 2.5rem;
+  outline: none;
+}
+
+.text-area form input ::-webkit-input-placeholder {
+  color: #ce9797;
+  margin-left: 1.2rem;
+  opacity: 1;
+}
+
+.text-area form input :-ms-input-placeholder {
+  color: #ce9797;
+  margin-left: 1.2rem;
+  opacity: 1;
+}
+
+.text-area form input ::-ms-input-placeholder {
+  color: #ce9797;
+  margin-left: 1.2rem;
+  opacity: 1;
+}
+
+.text-area form input ::placeholder {
+  color: #ce9797;
+  margin-left: 1.2rem;
+  opacity: 1;
+}
+
+.text-area form button {
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  padding: 1rem 3.5rem;
+  border-radius: 3rem;
+  height: 5rem;
+  position: absolute;
+  right: -3px;
+  top: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-box-shadow: 5px 5px 10px rgba(85, 0, 0, 0.308);
+          box-shadow: 5px 5px 10px rgba(85, 0, 0, 0.308);
+}
+
+.text-area form button img {
+  pointer-events: none;
+}
+
+.text-area form button :hover {
+  height: 53px;
+  width: 94px;
+  background: linear-gradient(135deg, #f3d2d2, #f09e9e);
+}
+
+.text-area form .error-img {
+  width: 20px;
+  height: auto;
+  position: absolute;
+  right: 23%;
+  top: 20%;
+  z-index: 2;
+  display: none;
+}
+
+.text-area form .sucess-msg,
+.text-area form .error-msg {
+  color: #ce9797;
+  margin: 0.7rem 0 0 2rem;
+  font-size: 1.3rem;
+  display: none;
+}
+
+.text-area form input.error {
+  border: 1px solid #f96262;
+}
+
+.text-area form .error-img.error,
+.text-area form .error-msg.error,
+.text-area form .sucess-msg.sucess {
+  display: block;
+}
+
+.image-area .mobile-sec {
+  display: none;
+}
+
+.image-area .destop-img {
+  background-image: url(/images/hero-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  background-position: top;
+}
+
+@media (max-width: 1024px) {
+  .text-area {
+    padding: 4rem 3rem 3rem 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-area .destop-img {
+    display: block;
+  }
+  .container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .text-area {
+    padding: 1.2rem;
+  }
+  .text-area .description h1 {
+    letter-spacing: 0.5rem;
+  }
+}
+
+@media (max-width: 675px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main {
+    overflow: hidden;
+  }
+  .text-area {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding: 4rem 3rem 2rem;
+    height: 100%;
+    width: 100%;
+  }
+  .text-area .description {
+    text-align: center;
+  }
+  .text-area .description h1 {
+    font-size: 3.5rem;
+    letter-spacing: 0.95rem;
+  }
+  .text-area .description p {
+    width: 100%;
+    min-width: 150px;
+    max-width: 1000px;
+    line-height: 2.3rem;
+    font-size: 14px;
+    text-align: center;
+  }
+  .text-area .destop-logo {
+    display: none;
+  }
+  .text-area form {
+    margin-top: 2.3rem;
+    width: 100%;
+    min-width: 100px;
+    max-width: 3000px;
+  }
+  .text-area form input {
+    height: 50px;
+    width: 100%;
+    width: 100%;
+  }
+  .text-area form .email-btn {
+    padding: 0.5rem 3rem;
+    right: 0;
+    top: 0;
+  }
+  .text-area form .email-btn :hover {
+    height: 50px;
+    width: 60px;
+  }
+  .image-area {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .image-area .mobile-sec {
+    display: block;
+  }
+  .image-area .mobile-sec .mobile-logo {
+    width: 30%;
+    margin: 1.5rem;
+  }
+  .image-area .mobile-sec .mobile-img {
+    background-image: url(/images/hero-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 100%;
+    min-height: 250px;
+    max-height: 400px;
+    width: 100vw;
+  }
+  .image-area .destop-img {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

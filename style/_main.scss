@@ -1,0 +1,132 @@
+img {
+  width: 100%;
+  height: auto;
+}
+main {
+  height: 100vh;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  height: 100vh;
+}
+.text-area {
+  padding: 4.5rem 18rem 3rem 15rem;
+  display: flex;
+  flex-direction: column;
+  background: url(/images/bg-pattern-desktop.svg),
+    linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  background-position: center, center;
+  .destop-logo {
+    width: 34%;
+    margin-bottom: 8.3rem;
+  }
+  .description {
+    h1 {
+      font-size: 6rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5rem;
+      font-weight: 400;
+      color: $dark-Grayish-Red;
+      span {
+        color: $desaturated-Red;
+        font-weight: 300;
+      }
+    }
+    p {
+      font-size: 1.4rem;
+      color: $desaturated-Red;
+      margin-top: 1.7rem;
+      width: 100%;
+      min-width: 400px;
+      max-width: 500px;
+      line-height: 2.3rem;
+      font-weight: 400;
+    }
+  }
+  form {
+    margin-top: 4rem;
+    position: relative;
+    width: 100%;
+    min-width: 380px;
+    max-width: 500px;
+    input {
+      height: 5rem;
+      width: 100%;
+      border-radius: 3rem;
+      padding: 1.1rem 2.6rem;
+      height: 5rem;
+      border: 0.1rem solid $desaturated-Red;
+      background: transparent;
+      color: $desaturated-Red;
+      padding-left: 2.5rem;
+      outline: none;
+      ::placeholder {
+        color: $desaturated-Red;
+        margin-left: 1.2rem;
+        opacity: 1;
+      }
+    }
+    button {
+      background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+      padding: 1rem 3.5rem;
+      border-radius: 3rem;
+      height: 5rem;
+      position: absolute;
+      right: -3px;
+      top: 0;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 5px 5px 10px rgba(85, 0, 0, 0.308);
+      img {
+        pointer-events: none;
+        // display: none;
+      }
+      :hover {
+        height: 53px;
+        width: 94px;
+        background: linear-gradient(135deg, hsl(0, 59%, 89%), hsl(0, 73%, 78%));
+      }
+    }
+    .error-img {
+      width: 20px;
+      height: auto;
+      position: absolute;
+      right: 23%;
+      top: 20%;
+      z-index: 2;
+      display: none;
+    }
+    .sucess-msg,
+    .error-msg {
+      color: $desaturated-Red;
+      margin: 0.7rem 0 0 2rem;
+      font-size: 1.3rem;
+      display: none;
+    }
+    input.error {
+      border: 1px solid $soft-Red;
+    }
+    .error-img.error,
+    .error-msg.error,
+    .sucess-msg.sucess {
+      display: block;
+    }
+  }
+}
+.image-area {
+  .mobile-sec {
+    display: none;
+  }
+  .destop-img {
+    background-image: url(/images/hero-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    background-position: top;
+  }
+}
